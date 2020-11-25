@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Github Project</title>
+</head>
+<body>
+    <h1>Javascript Tutorial</h1>
+    <button id="button1" onclick="myfunction()">Click To Find Date</button><br><br>
+    <span id="hello"> </span><br><br>
+    <button id="button2" onclick="year()">Click To Find Year</button><br><br>
+    <span id="hello2"> </span><br><br>
+    <button id="button3" onclick="month()">Click To Find Month</button><br><br>
+    <span id="hello3"> </span><br><br>
+    <button id="button4" onclick="Second()">Click To Find Seconds</button><br><br>
+    <span id="hello4"> </span><br><br>
+    <button id="button5" onclick="Minute()">Click To Find Minute (change After 60 Second)</button><br><br>
+    <span id="hello5"> </span><br><br>
+    <button id="button6" onclick="hour()">Click To Find Hours</button><br><br>
+    <span id="hello6"> </span><br><br>
+    <button id="button7" onclick="age()">Click To Find Out Your Age</button><br><br>
+    <span id="hello7"> </span><br><br>
+    <!-- <button id="button8" onclick="location2()">Click To Check Your Location State</button><br><br>
+    <span id="hello8"> </span><br><br> -->
+    
+    
+    
+    <script>
+        function myfunction(){
+            var d= new Date();
+        document.getElementById('hello').innerHTML=d.getDate();
+        }
+        function year(){
+            var d=new Date();
+            document.getElementById('hello2').innerHTML=d.getFullYear();
+        }
+        function month(){
+            var d=new Date();
+            document.getElementById('hello3').innerHTML=d.getMonth()+1;
+        }
+        function Second(){
+            var d=new Date();
+
+            document.getElementById('hello4').innerHTML=d.getSeconds();
+        }
+        function Minute(){
+            var d=new Date();
+            document.getElementById('hello5').innerHTML=d.getMinutes();
+        }
+        function hour(){
+            var d=new Date();
+            document.getElementById('hello6').innerHTML=d.getHours();
+        }
+        function age(){
+            var age=prompt("Enter Your Birth Day Year");
+            var x= age.length;
+            if(x<=3)
+            {
+                document.getElementById('hello7').innerHTML="Please Enter Valid Birthday year";
+            }
+            if(x>=5)
+            {
+                document.getElementById('hello7').innerHTML="Please Enter Valid Birthday year";
+                
+            }
+            else if(age=="")
+            {
+                document.getElementById('hello7').innerHTML="Please Enter Your Birthday Year";
+            }
+            
+            else{
+            var mainage=2020 - age;
+           document.getElementById('hello7').innerHTML=mainage;
+           
+            }
+           
+            
+        }
+        function location2(){
+        }
+    </script>
+    
+</body>
+</html>
